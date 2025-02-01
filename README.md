@@ -1,6 +1,8 @@
 # GENAI-Audio
 Micro ML API for Audio Generation
 
+Model Details: https://github.com/hkchengrex/MMAudio
+
 ## Set up
 
 Build the docker image using cog:
