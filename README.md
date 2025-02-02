@@ -17,17 +17,7 @@ Once in the docker container, run the gradio UI:
 
 Navigate to [localhost:8090](http://localhost:8090) to see the UI.
 
-## API
-
-First, build the docker image using cog:
-
-`cog build -t genai-audio`
-
-Then, run the docker image:
-
-`docker run -d -p 5000:5000 --gpus 1 genai-audio`
-
-To check that the API is running, navigate to [localhost:5000](http://localhost:5000).
-
-## Testing
-
+### To Do
+- Create predict.py for inference endpoint
+- Play with text prompt vs. static image vs. equirectangular crop + pan video
+- save weights to current directory

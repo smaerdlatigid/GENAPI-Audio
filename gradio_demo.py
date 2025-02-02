@@ -1,6 +1,5 @@
 import gc
 import logging
-from argparse import ArgumentParser
 from datetime import datetime
 from fractions import Fraction
 from pathlib import Path
@@ -334,11 +333,7 @@ image_to_audio_tab = gr.Interface(
 )
 
 if __name__ == "__main__":
-    parser = ArgumentParser()
-    parser.add_argument('--port', type=int, default=8090)
-    args = parser.parse_args()
-                           # serve at 0.0.0.0
 
     gr.TabbedInterface([video_to_audio_tab, text_to_audio_tab, image_to_audio_tab],
                        ['Video-to-Audio', 'Text-to-Audio', 'Image-to-Audio (experimental)']).launch(
-                           server_name='0.0.0.0', server_port=args.port, allowed_paths=[output_dir])
+                           server_name='0.0.0.0', server_port=8090, allowed_paths=[output_dir])
